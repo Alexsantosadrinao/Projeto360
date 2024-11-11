@@ -49,8 +49,9 @@ const UsuarioAPI = {
     },
     async atualizarAsync(id, nome, email,tipoUsuarioId ) {
         try {
+            const tipoUsuarioIdConvertido = parseInt(tipoUsuarioId)
             const usuarioAtualizar = {
-                TipoUsuarioId: tipoUsuarioId,
+                TipoUsuarioId: tipoUsuarioIdConvertido,
                 Nome: nome,
                 Email: email,
                 Id: id
@@ -65,7 +66,7 @@ const UsuarioAPI = {
     async deletarAsync(usuarioid ) {
         try {
       
-            const response = await HTTPClient.delete(`/Usuario/Deletar${usuarioid}`);
+            const response = await HTTPClient.delete(`/Usuario/Deletar/${usuarioid}`);
             return response.data;
         } catch (error) {
             console.error("Erro ao deletar usuario", error);

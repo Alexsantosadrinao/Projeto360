@@ -15,7 +15,7 @@ export function Usuario() {
 
     const handClikDeletar = (usuario) => {
         setUsuarioSelecionado(usuario)
-        setUsuarioSelecionado(true);
+        setMostarModal(true);
     };
 
     const handleDeletar = async () => {
@@ -31,7 +31,7 @@ export function Usuario() {
 
     const handleFecharModal = () => {
         setMostarModal(false);
-        setUsuarioSelecionado(null);;
+        setUsuarioSelecionado(null);
     }
 
     async function carregarUsuarios() {
@@ -77,7 +77,7 @@ export function Usuario() {
                                             <Link to='/usuario/editar' state={Usuario.id} className={style.botao_editar}>
                                                 <MdEdit />
                                             </Link>
-                                            <button onClick={() => handClikDeletar(Usuario)} className={style.bota_deletar}>
+                                            <button onClick={() => handClikDeletar(Usuario)} className={style.botao_deletar}>
                                                 <MdDelete/>
                                             </button>
 

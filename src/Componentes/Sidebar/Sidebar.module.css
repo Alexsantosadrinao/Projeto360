@@ -13,6 +13,24 @@
 
 }
 
+.Sidebar_conteudo.reduzida {
+    width: 80px; 
+}
+
+
+.Botao_Sidebar{
+   
+    display:  flex;
+   margin: 10px;
+   justify-content: flex-end;
+}
+
+.Botao_Sidebar Button{
+    background: none;
+    
+}
+
+
 .pagina_conteudo{
     margin-left: 20%;
 }

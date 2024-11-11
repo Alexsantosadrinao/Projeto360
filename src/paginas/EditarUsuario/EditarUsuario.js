@@ -26,7 +26,7 @@ export function EditarUsuario() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (isFormValid()) {
-            await UsuarioAPI.atualizarAsync(nome, email,  tipoUsuario );
+            await UsuarioAPI.atualizarAsync(id, nome, email,  tipoUsuario );
             navigate('/usuarios')
         } else {
             alert('Por favor preencha todos os campos.');
