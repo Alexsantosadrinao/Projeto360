@@ -5,6 +5,7 @@ import { Home } from './paginas/Home/Home';
 import { Usuario } from './paginas/Home/Usuarios/Usuarios';
 import { NovoUsuario } from './paginas/NovoUsuario/NovoUsuario';
 import { EditarUsuario } from './paginas/EditarUsuario/EditarUsuario';
+import { Restaurar } from './paginas/Restaurar/Restaurar';
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <Route path='/usuarios' element={<Usuario/>} />
       <Route path='/usuario/novo' element={<NovoUsuario/>} />
       <Route path='/usuario/editar' element={<EditarUsuario/>} />
+      <Route path='/usuario/restaurar' element={<Restaurar/>} />
     </Routes>
     </BrowserRouter>
   );

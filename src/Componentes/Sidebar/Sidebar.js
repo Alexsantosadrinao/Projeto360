@@ -5,13 +5,13 @@ import { MdGroup } from "react-icons/md";
 import { SidebarItem } from "../Sidebaritem/Sidebaritem";
 import { Button } from "react-bootstrap";
 import { FcMenu } from "react-icons/fc";
+import { useState } from "react";
+
 
 export function Sidebar({ children }) {
+    const [sidebar, setSidebar] = useState(false)
 
-    function SidebarRetratil() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("reduzida");
-    }
+    const showSiderbar = () => setSidebar(!sidebar)
 
 
     return (
@@ -19,14 +19,19 @@ export function Sidebar({ children }) {
             <div className={style.Sidebar_conteudo}>
 
 
-               <div className={style.Botao_Sidebar}>
-               <Button variant="primary"  onClick={SidebarRetratil} 
-                    ><FcMenu/></Button>
+                <div className={style.Botao_Sidebar}>
+                    <Button variant="primary" onClick={showSiderbar}>
+                        {
+                            sidebar &&
+                            <Sidebar active={setSidebar} />
+                        }
+                        <FcMenu />
+                    </Button>
 
-                    
-               </div>
-                  
-             
+
+                </div>
+
+
 
 
 
@@ -37,7 +42,7 @@ export function Sidebar({ children }) {
                 </div>
                 <div className={style.Sidebar_corpo}>
                     <SidebarItem texto="Usuarios" link="/usuarios" logo={<MdGroup />} />
-                    <SidebarItem texto="algo" link="/algo" logo={<DiAndroid />} />
+                    <SidebarItem texto="Restaurar" link="/usuario/restaurar" logo={<DiAndroid />} />
                 </div>
 
             </div>
