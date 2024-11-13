@@ -17,7 +17,7 @@ function App() {
       <Route path='/usuarios' element={<Usuario/>} />
       <Route path='/usuario/novo' element={<NovoUsuario/>} />
       <Route path='/usuario/editar' element={<EditarUsuario/>} />
-      <Route path='/usuario/restaurar' element={<Restaurar/>} />
+      <Route path='/usuarios/restaurar' element={<Restaurar/>} />
     </Routes>
     </BrowserRouter>
   );

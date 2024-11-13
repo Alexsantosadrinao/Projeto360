@@ -90,7 +90,7 @@ const UsuarioAPI = {
     async restaurarAsync(usuarioid ) {
         try {
          
-            const response = await HTTPClient.put(`/Usuario/AlterarSenha${usuarioid}`);
+            const response = await HTTPClient.put(`/Usuario/restaurar/${usuarioid}`);
             return response.data;
         } catch (error) {
             console.error("Erro ao restaurar usuario", error);

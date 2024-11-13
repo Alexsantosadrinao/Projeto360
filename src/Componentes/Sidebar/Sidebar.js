@@ -42,12 +42,13 @@ export function Sidebar({ children }) {
                 </div>
                 <div className={style.Sidebar_corpo}>
                     <SidebarItem texto="Usuarios" link="/usuarios" logo={<MdGroup />} />
-                    <SidebarItem texto="Restaurar" link="/usuario/restaurar" logo={<DiAndroid />} />
+                    <SidebarItem texto="Restaurar" link="/usuarios/restaurar" logo={<DiAndroid />} />
                 </div>
 
             </div>
 
             <div className={style.pagina_conteudo} >
+                
                 {children}
 
             </div>
